@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 * {
     margin: 0;
@@ -91,4 +91,126 @@
 .start_btn:hover{
     border: 4px solid #C2A5F9;
     cursor: pointer;
+}
+
+/* Sign-Up Page */
+
+.left_side img{
+    position: relative;
+}
+
+.left_side_content{
+    position: absolute;
+    z-index: 1;
+    left: 132px;
+    top: 335px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #212529;
+}
+
+.left_side_content h1{
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.left_side_content h2{
+    padding-top: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #E5E6E8;
+}
+
+.signup_section{
+   width: 997px;
+}
+
+.signup_section .header{
+    padding-left: 48px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(185, 180, 195, 0.3);
+
+}
+
+.signup_section .header p{
+    font-family: 'Open Sans';
+    color: #212529;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+
+.content_container{
+    padding-top: 60px;
+    padding-left: 48px;
+
+}
+.form_change {
+    width: 366px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.form_change .first,
+.form_change .second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_change .box{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E5E6E8;
+    border-radius: 8px;
+    position:relative;
+  
+}
+
+.form_change .box h1{
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.form_change p{
+    padding-top: 4px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+.form_container{
+    margin-top:112px;
+}
+
+.title_wrap h1{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 32px;
+    color:#000;
+}
+
+.title_wrap p{
+    padding-top: 3px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    color: #95939A;
+    text-transform: capitalize;
+}
+
+.form_change img{
+    position: absolute;
+    top:20px;
+    left:100px;
+    padding: 0 4px;
 }
