@@ -47,51 +47,54 @@
                             <h1>Personal information</h1>
                             <p>This is basic informaton fields</p>
                         </div>
+                        
                         <div class="form_wrap">
-                            <form action="">
+                            <form action="" id="input_form">
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" required>
-                                        <div class="placeholder">
+                                        <input type="text" id="name" onfocus ="removeText('name_holder')" required>
+                                        <div class="placeholder" id="name_holder">
                                             Name<span> *</span>
                                         </div>
                             </div>
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" required>
-                                        <div class="placeholder">
+                                        <input  type="text" id="email" onfocus ="removeText('email_holder')" required>
+                                        <div class="placeholder" id="email_holder">
                                             Email Address<span> *</span>
                                         </div>
                             </div>
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" required>
-                                        <div class="placeholder">
+                                        <input type="text" id="number"  onfocus ="removeText('number_holder')" required>
+                                        <div class="placeholder" id="number_holder">
                                             Phone Number<span> *</span>
                                         </div>
                             </div>
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" required>
-                                        <div class="placeholder">
+                                        <input type="date" id="date" onfocus ="removeText('date_holder')"required>
+                                        <div class="placeholder" id="date_holder">
                                             Date of birth<span> *</span>
                                         </div>
                             </div>
                                 </div>
+                                <div class="buttons_wrap">
+                                    <button class="back_btn">Back</button>
+                                    <button type="submit" class="next_btn" id="next">Next<img src="assets/Vector (1).png" alt="arrow_img"></button>
+                                </div>
                             </form>
                         </div>
-                        <div class="buttons_wrap">
-                            <button class="back_btn">Back</button>
-                            <button class="next_btn" id="next">Next<img src="assets/Vector (1).png" alt="arrow_img"></button>
-                        </div>
+                        
                     </div>
                 </div>
                
             </div>
             </div>
         </main>
+        <script src="JS/script.js"></script>
 </body>
 </html>
