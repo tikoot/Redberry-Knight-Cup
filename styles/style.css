@@ -239,7 +239,18 @@
     color: #212529;;
 }
 
+.input_cont{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
 
+.input_cont_img{
+   position: absolute;
+   top:2px;
+   right: 0px;
+   display: none;
+}
 
 .placeholder {
     font-family: 'Open Sans';
@@ -252,9 +263,13 @@
   }
 
 
-  .placeholder span {
+.placeholder span {
     color:  rgba(220, 53, 69, 1);
 }  
+
+.error_color{
+    color: #DC3545;
+}
 
 .buttons_wrap{
     display: flex;
@@ -263,6 +278,9 @@
     padding-top: 96px;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
 /* Buttons */
 
 

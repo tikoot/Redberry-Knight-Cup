@@ -12,7 +12,7 @@
         <div class="wrap_container signup_container">
             <div class="left_side">
                 <div class="header">
-                    <img src="assets/Vector (1).png" alt="crown_img" class="logo">
+                    <img src="assets/cr.png" alt="crown_img" class="logo">
                     <p>redberry knight cup</p>
                 </div>
                 <div class="left_side_content">
@@ -46,11 +46,11 @@
                         <div class="error_header_wrap">
                             <div class="error_header">
                                 <img src="./assets/Vector.png" alt="alert_img">
-                                <h1></h1>
+                                <h1 id="error"></h1>
                             </div>
                             <button><img src="assets/Vector (2).png" alt="close_img"></button>
                         </div>
-                        <p></p>
+                        <p id="description"></p>
                     </div>
                     <div class="form_container">
                         <div class="title_wrap">
@@ -61,7 +61,12 @@
                             <form action="" id="input_form">
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" id="name" onfocus ="removeText('name_holder')" required>
+                                        <div class="input_cont">
+                                            <input type="text" id="name" onfocus ="removeText('name_holder')" required>
+                                            <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
+                                        </div>
+
+                                        
                                         <div class="placeholder" id="name_holder">
                                             Name<span> *</span>
                                         </div>
@@ -69,7 +74,11 @@
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input  type="text" id="email" onfocus ="removeText('email_holder')" required>
+                                        <div class="input_cont">
+                                            <input  type="email" id="email" onfocus ="removeText('email_holder')" required>
+                                            <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
+                                        </div>
+                                        
                                         <div class="placeholder" id="email_holder">
                                             Email Address<span> *</span>
                                         </div>
@@ -77,7 +86,11 @@
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="text" id="number"  onfocus ="removeText('number_holder')" required>
+                                        <div>
+                                            <input type="text" id="number"  onfocus ="removeText('number_holder')" required>
+                                            <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
+                                        </div>
+                                        
                                         <div class="placeholder" id="number_holder">
                                             Phone Number<span> *</span>
                                         </div>
@@ -85,7 +98,10 @@
                                 </div>
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
-                                        <input type="date" id="date" onfocus ="removeText('date_holder')"required>
+                                    <div>
+                                        <input  type="text" onfocus="(this.type='date'), removeText('date_holder') " id="date" required>
+                                        <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
+                                    </div>
                                         <div class="placeholder" id="date_holder">
                                             Date of birth<span> *</span>
                                         </div>
