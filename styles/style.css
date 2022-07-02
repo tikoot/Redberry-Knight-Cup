@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
+    overflow: hidden;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -119,6 +119,7 @@
 
 
 .content_container{
+    width: 823px;
     padding-top: 60px;
     padding-left: 48px;
 }
@@ -147,12 +148,21 @@
     position:relative;
 }
 
+.form_change .second .box{
+    background-color: #F5F5F5;;
+}
+
 .form_change .box h1{
     position: absolute;
     left: 14px;
     top: 8px;
+    font-family: 'Open Sans';
     font-weight: 700;
     font-size: 18px;
+}
+
+.form_change .second .box h1{
+    color: rgba(149, 147, 154, 1);
 }
 
 .form_change p{
@@ -212,7 +222,7 @@
     border: none;
     outline: none;
     height: 30px;
-    width: 743px;
+    width: 743px;    
     font-family: 'Open Sans';
     font-weight: 400;
     font-size: 20px;
@@ -244,7 +254,12 @@
     color:  rgba(220, 53, 69, 1);
 }  
 
-
+.buttons_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 96px;
+}
 
 /* Buttons */
 
