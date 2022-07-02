@@ -27,8 +27,10 @@ function checkInput(){
     const numberVal = number.value;
     const dateVal = date.value;
 
-    const letters = /^[A-Za-z]+$/;
-    if(usernameVal.length < 2 || !username.value.match(letters) ){
+    const nameReg = /^[A-Za-z]+$/;
+    const emailReg = /^[a-z][a-z0-9_.]*@redberry.ge+$/;
+    
+    if(usernameVal.length < 2 || !usernameVal.match(nameReg) ){
         let text1 = 'Invalid name';
         let text2 = 'Please enter valid name';
         showError(username,text1,text2);
@@ -36,7 +38,13 @@ function checkInput(){
         showSuccess(username);
     }
 
-    
+    if(!emailVal.match(emailReg) ){
+        let text1 = 'Invalid email';
+        let text2 = 'Please enter valid email';
+        showError(email,text1,text2);
+    }else{
+        showSuccess(email);
+    }
 }
 
 
