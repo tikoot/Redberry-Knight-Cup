@@ -119,9 +119,9 @@
 
 
 .content_container{
-    width: 823px;
     padding-top: 60px;
     padding-left: 48px;
+    position: relative;
 }
 
 
@@ -205,6 +205,9 @@
     flex-direction: column;
     padding-top: 93px;
 }
+.form_wrap {
+    width: 775px;
+}
 
 .each_input_wrapper{
     width: 775px;
@@ -235,9 +238,8 @@
     left: 14px;
     color: #212529;;
 }
-.input_wrap input:valid + .placeholder {
-    display: none;
-}
+
+
 
 .placeholder {
     font-family: 'Open Sans';
@@ -314,3 +316,52 @@
     color: #000;
     cursor: pointer; 
 }
+
+/* Error Box */
+
+.error_box{
+    width: 350px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position:absolute;
+    left:608px;
+    display: none;
+}
+
+.error_header_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px  12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error_header{
+    display: flex;
+    align-items:flex-end;
+}
+
+.error_header h1{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 14px;
+    color: #DC3545;
+    padding-left: 8px;
+}
+
+.error_header_wrap button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.error_box p{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #212529;
+    padding: 12px;
+}
+
