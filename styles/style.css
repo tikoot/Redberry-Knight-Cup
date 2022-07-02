@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+   
     font-family: 'Nunito', sans-serif;
 }
 
@@ -67,31 +67,6 @@
 }
 
 
-.start_btn{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 24px;
-    margin-top: 102px;
-
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: capitalize;
-    color: #fff;
-    background-color: #212529;
-    
-    border: 4px solid #FD5334;
-    border-radius: 8px;
-}
-
-.start_btn  img{
-    padding-left: 12px;
-}
-
-.start_btn:hover{
-    border: 4px solid #C2A5F9;
-    cursor: pointer;
-}
 
 /* Sign-Up Page */
 
@@ -268,3 +243,59 @@
   .placeholder span {
     color:  rgba(220, 53, 69, 1);
 }  
+
+
+
+/* Buttons */
+
+
+.start_btn,
+.next_btn,
+.back_btn{
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #212529;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 24px;
+    border-radius: 8px;
+}
+
+.start_btn{
+    margin-top: 102px;
+    border: 4px solid #FD5334;
+}
+
+.next_btn{
+    border: 4px solid #fff;
+}
+
+.back_btn{
+   background-color: transparent;
+   color:  #212529;
+   border: 1px solid rgba(33, 37, 41, 1);
+   
+}
+
+.start_btn  img,
+.next_btn  img{
+    padding-left: 12px;
+}
+
+.start_btn:hover,
+.next_btn:hover{
+    border: 4px solid rgba(194, 165, 249, 0.8);
+    cursor: pointer;
+}
+
+.back_btn:hover{
+    border-color: rgba(194, 165, 249, 0.8);
+    background-color: rgba(185, 180, 196, 0.3);
+    color: #000;
+    cursor: pointer; 
+}
