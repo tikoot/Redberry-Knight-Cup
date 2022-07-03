@@ -5,60 +5,27 @@ const phone = document.getElementById('phone');
 const date = document.getElementById('date_of_birth');
 
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(checkInput()){
+        location.href = "experience.html";
+    } 
+});
 
 
-function displayPlaceholder(input,storage){
-    const parent = input.closest('.input_cont');
-    const target = parent.nextElementSibling;
+/* input placeholder */
 
-
-    input.addEventListener("focus", check);
-
-    if(localStorage.getItem(storage) ){
-      check(); 
-    }else{
-        target.style.display = 'block';  
-    }  
-
-    function check(){
-        target.style.display = 'none'; 
-    }
-}
 
 displayPlaceholder(username,'name');
 displayPlaceholder(email,'email');
 displayPlaceholder(phone,'phone');
 displayPlaceholder(date,'date_of_birth');
 
-email.value = localStorage.getItem('email');
-username.value = localStorage.getItem('name');
-phone.value = localStorage.getItem('phone');
-date.value = localStorage.getItem('date_of_birth');
 
-
-
-username.addEventListener('keyup' , event => {
-    localStorage.setItem('name',event.target.value);
-});
-email.addEventListener('keyup' , event => {
-    localStorage.setItem('email',event.target.value);
-});
-phone.addEventListener('keyup' , event => {
-    localStorage.setItem('phone',event.target.value);
-});
-date.addEventListener('keyup' , event => {
-    localStorage.setItem('date_of_birth',event.target.value);
-});
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    checkInput();
-    
-
-});
-
+/* UserInput Validation and Errors */
 
 function checkInput(){
+    
     const usernameVal = username.value;
     const emailVal = email.value;
     const phoneVal = phone.value;
@@ -68,12 +35,15 @@ function checkInput(){
     const emailReg = /^[a-z][a-z0-9_.]*@redberry.ge+$/;
     const phoneReg = /^\d{9}$/;
 
+    let checker;
+    let validationArray = [];
     if(usernameVal.length < 2 || !usernameVal.match(nameReg) ){
         let text1 = 'Invalid name';
         let text2 = 'Please enter valid name';
         showError(username,text1,text2);
     }else{
         showSuccess(username);
+        validationArray.push('username');
     }
 
     if(!emailVal.match(emailReg) ){
@@ -82,6 +52,7 @@ function checkInput(){
         showError(email,text1,text2);
     }else{
         showSuccess(email);
+        validationArray.push('username');
     }
 
     if(!phoneVal.match(phoneReg)){
@@ -90,11 +61,20 @@ function checkInput(){
         showError(phone,text1,text2);
     }else{
         showSuccess(phone);
+        validationArray.push('username');
     }
 
     if(dateVal){
         showSuccess(date);
+        validationArray.push('username');
     }
+
+    if(validationArray.length == 4 ){
+        checker = true;
+    }else{
+        checker = false;
+    }
+    return checker;
 }
 
 function showError(input,text1,text2){
@@ -116,6 +96,48 @@ function showSuccess(input){
     let successImg = input.nextElementSibling;
     successImg.style.display = 'block';
 }
+
+
+function displayPlaceholder(input,storage){
+    const parent = input.closest('.input_cont');
+    const target = parent.nextElementSibling;
+
+
+    input.addEventListener("focus", check);
+
+    if(localStorage.getItem(storage) ){
+      check(); 
+    }else{
+        target.style.display = 'block';  
+    }  
+
+    function check(){
+        target.style.display = 'none'; 
+    }
+}
+
+/* localstorage */
+
+email.value = localStorage.getItem('email');
+username.value = localStorage.getItem('name');
+phone.value = localStorage.getItem('phone');
+date.value = localStorage.getItem('date_of_birth');
+
+
+
+username.addEventListener('keyup' , event => {
+    localStorage.setItem('name',event.target.value);
+});
+email.addEventListener('keyup' , event => {
+    localStorage.setItem('email',event.target.value);
+});
+phone.addEventListener('keyup' , event => {
+    localStorage.setItem('phone',event.target.value);
+});
+date.addEventListener('keyup' , event => {
+    localStorage.setItem('date_of_birth',event.target.value);
+});
+
 
 
 
