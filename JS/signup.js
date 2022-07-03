@@ -6,12 +6,57 @@ const date = document.getElementById('date_of_birth');
 
 
 
+
+function displayPlaceholder(input,storage){
+    const parent = input.closest('.input_cont');
+    const target = parent.nextElementSibling;
+
+
+    input.addEventListener("focus", check);
+
+    if(localStorage.getItem(storage) ){
+      check(); 
+    }else{
+        target.style.display = 'block';  
+    }  
+
+    function check(){
+        target.style.display = 'none'; 
+    }
+}
+
+displayPlaceholder(username,'name');
+displayPlaceholder(email,'email');
+displayPlaceholder(phone,'phone');
+displayPlaceholder(date,'date_of_birth');
+
+email.value = localStorage.getItem('email');
+username.value = localStorage.getItem('name');
+phone.value = localStorage.getItem('phone');
+date.value = localStorage.getItem('date_of_birth');
+
+
+
+username.addEventListener('keyup' , event => {
+    localStorage.setItem('name',event.target.value);
+});
+email.addEventListener('keyup' , event => {
+    localStorage.setItem('email',event.target.value);
+});
+phone.addEventListener('keyup' , event => {
+    localStorage.setItem('phone',event.target.value);
+});
+date.addEventListener('keyup' , event => {
+    localStorage.setItem('date_of_birth',event.target.value);
+});
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInput();
     
 
 });
+
 
 function checkInput(){
     const usernameVal = username.value;
@@ -74,38 +119,4 @@ function showSuccess(input){
 
 
 
-function displayPlaceholder(input,storage){
-    const parent = input.closest('.input_cont');
-    const target = parent.nextElementSibling;
 
-    if(input.value.length > 0 || localStorage.getItem(storage) ){
-       target.style.display = 'none';  
-    }else{
-        target.style.display = 'block';  
-    }
-}
-
-displayPlaceholder(username,'name');
-displayPlaceholder(email,'email');
-displayPlaceholder(phone,'phone');
-displayPlaceholder(date,'date_of_birth');
-
-email.value = localStorage.getItem('email');
-username.value = localStorage.getItem('name');
-phone.value = localStorage.getItem('phone');
-date.value = localStorage.getItem('date_of_birth');
-
-
-
-username.addEventListener('keyup' , event => {
-    localStorage.setItem('name',event.target.value);
-});
-email.addEventListener('keyup' , event => {
-    localStorage.setItem('email',event.target.value);
-});
-phone.addEventListener('keyup' , event => {
-    localStorage.setItem('phone',event.target.value);
-});
-date.addEventListener('keyup' , event => {
-    localStorage.setItem('date_of_birth',event.target.value);
-});
