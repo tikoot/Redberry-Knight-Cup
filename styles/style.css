@@ -383,3 +383,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 12px;
 }
 
+/* experience page */
+
+.form_change .box_exp {
+    background-color: #E9FAF1;
+    border: none;
+}
+
+.box .box_img{
+    position: absolute;
+    top: 13px;
+    left: 8px;
+}
+
+.form_change .second .box_exp {
+    background: #FFFFFF;
+    border: 1px solid #E5E6E8;
+}
+
+#box_exp_txt{
+    color: #212529;
+}
+
+
+
+.knowledge_select{
+    padding: 8px 64px 8px 16px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    color: #212529;
+    background-color: #fff;
+    background-image: url(../assets/chevron.png);
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+option[value=""][disabled] {
+    display: none;
+  }
