@@ -22,21 +22,19 @@
 
 .header{
     background-color: #7025FB;
-    height:84px;
     display: flex;
     align-items: center;
     padding-left: 60px;
-    
+    padding-top: 30px;
+    padding-bottom: 30px;  
 }
 
-.header p{
+.header .logo{
+    padding-bottom: 5px;
+}
+
+.header .logo_txt{
     margin-left:8px;
-    padding-top: 2px;
-    color: #fff;
-    font-size: 23px;
-    font-weight: 900;
-    text-transform: capitalize;
-    
 }
 
 .right_side{
