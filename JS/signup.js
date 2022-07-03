@@ -1,13 +1,10 @@
-function removeText(x){
-    document.getElementById(x).style.display = 'none';
-}
-
-
 const form = document.getElementById('input_form');
 const username = document.getElementById('name');
 const email = document.getElementById('email');
-const number = document.getElementById('number');
-const date = document.getElementById('date');
+const phone = document.getElementById('phone');
+const date = document.getElementById('date_of_birth');
+
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -19,12 +16,12 @@ form.addEventListener('submit', (e) => {
 function checkInput(){
     const usernameVal = username.value;
     const emailVal = email.value;
-    const numberVal = number.value;
+    const phoneVal = phone.value;
     const dateVal = date.value;
 
     const nameReg = /^[A-Za-z]+$/;
     const emailReg = /^[a-z][a-z0-9_.]*@redberry.ge+$/;
-    const numberReg = /^\d{9}$/;
+    const phoneReg = /^\d{9}$/;
 
     if(usernameVal.length < 2 || !usernameVal.match(nameReg) ){
         let text1 = 'Invalid name';
@@ -42,12 +39,12 @@ function checkInput(){
         showSuccess(email);
     }
 
-    if(!numberVal.match(numberReg)){
+    if(!phoneVal.match(phoneReg)){
         let text1 = 'Invalid phone number';
         let text2 = 'Please enter valid phone number';
-        showError(number,text1,text2);
+        showError(phone,text1,text2);
     }else{
-        showSuccess(number);
+        showSuccess(phone);
     }
 
     if(dateVal){
@@ -71,6 +68,44 @@ function showError(input,text1,text2){
 }
 
 function showSuccess(input){
-    let successImg = input.nextElementSibling;;
+    let successImg = input.nextElementSibling;
     successImg.style.display = 'block';
 }
+
+
+
+function displayPlaceholder(input,storage){
+    const parent = input.closest('.input_cont');
+    const target = parent.nextElementSibling;
+
+    if(input.value.length > 0 || localStorage.getItem(storage) ){
+       target.style.display = 'none';  
+    }else{
+        target.style.display = 'block';  
+    }
+}
+
+displayPlaceholder(username,'name');
+displayPlaceholder(email,'email');
+displayPlaceholder(phone,'phone');
+displayPlaceholder(date,'date_of_birth');
+
+email.value = localStorage.getItem('email');
+username.value = localStorage.getItem('name');
+phone.value = localStorage.getItem('phone');
+date.value = localStorage.getItem('date_of_birth');
+
+
+
+username.addEventListener('keyup' , event => {
+    localStorage.setItem('name',event.target.value);
+});
+email.addEventListener('keyup' , event => {
+    localStorage.setItem('email',event.target.value);
+});
+phone.addEventListener('keyup' , event => {
+    localStorage.setItem('phone',event.target.value);
+});
+date.addEventListener('keyup' , event => {
+    localStorage.setItem('date_of_birth',event.target.value);
+});
