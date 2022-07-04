@@ -140,5 +140,15 @@ date.addEventListener('keyup' , event => {
 
 
 
+function changeBox(){
+    let select = document.querySelectorAll("input");
+  for (let i = 0; i < select.length; i++) {
+          let eachSelect = select[i];
+          eachSelect.onclick = function () {
+              let box = document.querySelector('.first .box');
+              box.style.background = '#E9FAF1';
+      } 
+    }
+  }
 
-
+changeBox();

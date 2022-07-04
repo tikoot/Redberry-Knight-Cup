@@ -224,6 +224,7 @@
 }
 
 
+
 .input_wrap input{
     border: none;
     outline: none;
@@ -568,4 +569,14 @@ ul#list_character {
     max-height: 176px;
     overflow-y: auto;
     overflow-x: hidden;
+  }
+
+
+  input[type="radio"]{
+    
+width: 20px;
+height: 20px;
+
+
+background: #0D6EFD;
   }
