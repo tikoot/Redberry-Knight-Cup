@@ -2,7 +2,7 @@ changeBox();
 getCharacters();
 dropdown();
 
-
+document.getElementById("selectText").textContent = localStorage.getItem('experience_level');
 
 function getCharacters(){
 let api ="https://chess-tournament-api.devtest.ge/api/grandmasters";
@@ -18,6 +18,7 @@ fetch(api, {
     let text = document.createElement('p');
     text.innerHTML = element.name;
     text.classList.add('text_character');
+    text.setAttribute('id',element.id);
     let image = document.createElement('img');
     image.src = 'https://chess-tournament-api.devtest.ge/' + element.image;
     list.appendChild(text);
@@ -42,10 +43,16 @@ selectField.onclick = function(){
 for (option of options) {
 option.onclick= function () {
     selectText.innerHTML = this.textContent;
+    selectText.dataset.value = this.textContent; // es amatebs atttributes
     list.classList.toggle('hide');
     arrowIcon.classList.toggle('rotate');
+    console.log(selectText.getAttribute('data-value')); // es aris value
+    storeLocal(selectText);
+  
     }
   } 
+
+
 }
 function dropdownCharacter(){
   
@@ -65,8 +72,10 @@ function dropdownCharacter(){
 for (option of options) {
 option.onclick= function () {
     selectText.innerHTML = this.textContent;
+    selectText.dataset.value = this.id; // es amatebs atttributes
     list.classList.toggle('hide_character');
     arrowIcon.classList.toggle('rotate_character');
+    console.log(selectText.getAttribute('data-value'));  // es amatebs atttributes
   }
 
 }
@@ -82,6 +91,14 @@ for (let i = 0; i < select.length; i++) {
             let box = document.querySelector('.second .box');
             box.style.background = '#E9FAF1';
     } 
+  }
+}
+
+
+
+function storeLocal(){
+  if(selectText.getAttribute('data-value') !== null){
+    localStorage.setItem('experience_level',selectText.getAttribute('data-value'));
   }
 }
 
