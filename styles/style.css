@@ -89,12 +89,17 @@
     font-size: 26px;
 }
 
+.quote{
+    padding-bottom:10px;
+}
+
 .left_side_content h2{
     padding-top: 24px;
     font-size: 24px;
     font-weight: 500;
     color: #E5E6E8;
 }
+
 
 .signup_section{
    width: 997px;
@@ -388,6 +393,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* experience page */
 
+.exp_quote{
+    top: 227px;
+}
+
+.left_side_content .author{
+    color: rgba(9, 63, 104, 1);
+    text-align: end;
+    
+}
+
 .form_change .box_exp {
     background-color: #E9FAF1;
     border: none;
@@ -399,52 +414,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     left: 8px;
 }
 
-.form_change .second .box_exp {
-    background: #FFFFFF;
-    border: 1px solid #E5E6E8;
-}
+
 
 #box_exp_txt{
     color: #212529;
 }
 
+
 .header_text{
     margin-bottom: 0;
 }
 
-.knowledge_select,
-.character_select{
-    padding: 8px 60px 8px 16px;
-    width: 392px;
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 20px;
-    color: #212529;
-    background-color: #fff;
-    background-image: url(../assets/chevron.png);
-    background-repeat: no-repeat;
-    background-position: 95%  center;
-    border: none;
-    outline: none;
-    box-shadow: inset 0px -1px 0px rgb(0 0 0 / 13%);
-    border-radius: 4px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-option[value=""][disabled] {
-    display: none;
-  }
-
-
-.select_container{
+.select_container_cont{
     display: flex;
     padding-bottom: 88px;
-}
-
-.knowledge_select{
-    margin-right: 23px;
 }
 
 .radio label{
@@ -466,4 +449,125 @@ option[value=""][disabled] {
 
 .choice p:first-of-type{
     padding-right: 23px ;
+}
+
+/* custom dropdowns */
+
+.selector{
+        width: 392px;
+        color: #212529;
+        
+}
+
+#selectField,
+#selectField_character{
+        box-shadow: inset 0px -1px 0px rgb(0 0 0 / 13%);
+        border-radius: 4px;
+        padding: 8px 19px 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+}
+
+#selectField{
+    margin-right: 23px;
+}
+
+#selectField img,
+#selectField_character img{
+        transition: transform 0.5s;
+}
+
+#list,
+#list_character{
+    border: 1px solid rgba(185, 180, 196, 0.3);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 4px;
+    padding: 20px 0 25px 0;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    z-index: 9999;
+    }
+
+
+.options,
+.options_character {
+    padding:8px 20px;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+#selectText,#selectText_character{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    }
+
+#selectText span,
+#selectText_character span{
+    color: rgba(220, 53, 69, 1);
+}
+
+.options:hover,
+.options_character:hover{
+    background-color: rgba(247, 247, 249, 1);
+    font-weight: 600;
+}
+
+.hide,
+.hide_character{
+    visibility: hidden;
+}
+
+.rotate,
+.rotate_character{
+    transform: rotate(180deg);
+}
+
+
+
+.options_character {
+    padding: 40px 28px ;
+    position: relative;
+}
+
+.options_character img {
+    width: 100px;
+    height: 72px;
+    object-fit: contain;
+    object-fit: cover;
+    position: absolute;
+    right: 19px;
+    bottom:25px;
+    
+    }
+ 
+
+
+
+.select_container{
+    position: relative;
+}
+
+.radio{
+    position: absolute;
+    bottom: 425px;
+    z-index: 0;
+    
+}
+
+.radio .choice{
+    padding-top: 22px;
+}
+
+.radio label,
+.radio .choice{
+    padding-left: 16px;
 }

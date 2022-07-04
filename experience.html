@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>Redberry Knight Cup</title>
 </head>
@@ -16,12 +15,12 @@
                     <img src="assets/cr.png" alt="crown_img" class="logo">
                     <img src="assets/Redberry Knight Cup.png" alt="header_logo" class="logo_txt">
                 </div>
-                <div class="left_side_content">
-                    <h1 class="quote">“When you see a good move,<br>
-                        look for a better one.”</h1>
-                        <h2>-Emanuel Lasker</h2>
+                <div class="left_side_content exp_quote">
+                    <h1 class="quote">“Many have become chess masters;</h1>
+                    <h1 class="quote">no one has become the master of chess.”</h1>
+                        <h2 class="author">- Siegbert Tarrasch</h2>
                 </div>
-              <img src="./assets/unsplash_27LH_0jXKYI.png" alt="chess_photo">
+              <img id="background_img" src="./assets/unsplash_27LH_0jXKYI (1).png" alt="chess_photo">
             </div>
             <div class="signup_section">
                 <div class="header">
@@ -52,33 +51,45 @@
                         <div class="form_wrap">
                             <form action="" id="form_experience">
                                 <div class="select_container">
-                                <select name="knowledge" class="knowledge_select"  aria-labelledby="dropdownMenuButton" required>
-                                <option value="" disabled selected>level of knowledge</option>*
-                                    <option value="begginer">Begginer</option>
-                                    <option value="intermediate">Intermediate</option>
-                                    <option value="professional">Professional</option>  
-                                </select>
-                            
-                                <select name="character" id="character_select" class="character_select">
-                                    <option value="" disabled selected>Choose your character</option>
-                                      
-                                </select>
-                            </div>
-                            <div class="radio">
-                                <label for="yes_no_radio">Have you participated in the Redberry Championship? <span>*</span></label>
-                                <div class="choice">
-                                        <p>
-                                        <input type="radio" name="yes_no" checked></input>
-                                        Yes
-                                        </p>
-                                        <p>
-                                        <input type="radio" name="yes_no"></input>
-                                        No
-                                        </p>
+                                    <div class="select_container_cont">
+                                    <div class="selector">
+                                        <div id="selectField">
+                                            <p id="selectText">level of knowledge <span>*</span></p>
+                                            <img src="../assets/chevron.png" alt="img" id="arrowIcon">
+                                        </div>
+                                        <ul id="list" class="hide">
+                                            <li class="options">Begginer</li>
+                                            <li class="options">Intermediate</li>
+                                            <li class="options">Professional</li>
+                                        </ul>
+                                    </div>
+                                    <div class="selector">
+                                        <div id="selectField_character">
+                                            <p id="selectText_character">Choose your character<span> *</span></p>
+                                            <img src="../assets/chevron.png" alt="img" id="arrowIcon_character">
+                                        </div>
+                                        <ul id="list_character" class="hide_character">
+
+                                        </ul>
+                                    </div>
                                 </div>
-                                    
+                                    <div class="radio">
+                                        <label for="yes_no_radio">Have you participated in the Redberry Championship? <span>*</span></label>
+                                        <div class="choice">
+                                                <p>
+                                                <input type="radio" name="yes_no" checked></input>
+                                                Yes
+                                                </p>
+                                                <p>
+                                                <input type="radio" name="yes_no"></input>
+                                                No
+                                                </p>
+                                        </div>
+                                            
+                                 </div>   
                             </div>
-                            </form>
+                            
+                        </form>
                         </div>
                         
                     </div>
@@ -88,5 +99,6 @@
             </div>
         </main>
         <script src="JS/experience.js"></script>
+       
 </body>
 </html>
