@@ -427,7 +427,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .select_container_cont{
     display: flex;
-    padding-bottom: 88px;
 }
 
 .radio label{
@@ -470,7 +469,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         cursor: pointer;
 }
 
-#selectField{
+#selectField,
+#list{
     margin-right: 23px;
 }
 
@@ -491,7 +491,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    z-index: 9999;
     }
 
 
@@ -500,6 +499,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding:8px 20px;
     list-style: none;
     cursor: pointer;
+    z-index: 999;
 }
 
 
@@ -511,7 +511,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
 #selectText span,
-#selectText_character span{
+#selectText_character span,
+#radio span{
     color: rgba(220, 53, 69, 1);
 }
 
@@ -550,19 +551,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
  
 
-
-
-.select_container{
-    position: relative;
-}
-
-.radio{
-    position: absolute;
-    bottom: 425px;
-    z-index: 0;
-    
-}
-
 .radio .choice{
     padding-top: 22px;
 }
@@ -571,3 +559,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .radio .choice{
     padding-left: 16px;
 }
+
+.dissapear{
+    opacity: 0;
+}
+
+ul#list_character {
+    max-height: 176px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
