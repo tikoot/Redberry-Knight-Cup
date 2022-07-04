@@ -277,8 +277,11 @@
     padding-top: 96px;
 }
 
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
+    opacity: 0;
+    cursor: pointer;
+    padding-right: 600px;
 }
 /* Buttons */
 
@@ -405,28 +408,62 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: #212529;
 }
 
+.header_text{
+    margin-bottom: 0;
+}
 
-
-.knowledge_select{
-    padding: 8px 64px 8px 16px;
+.knowledge_select,
+.character_select{
+    padding: 8px 60px 8px 16px;
+    width: 392px;
     font-family: 'Open Sans';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     color: #212529;
     background-color: #fff;
     background-image: url(../assets/chevron.png);
     background-repeat: no-repeat;
-    background-position: right .75rem center;
-    
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-position: 95%  center;
+    border: none;
+    outline: none;
+    box-shadow: inset 0px -1px 0px rgb(0 0 0 / 13%);
+    border-radius: 4px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
 
-
 option[value=""][disabled] {
     display: none;
   }
+
+
+.select_container{
+    display: flex;
+    padding-bottom: 88px;
+}
+
+.knowledge_select{
+    margin-right: 23px;
+}
+
+.radio label{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+
+.choice{
+    display: flex;
+    align-items: center;
+}
+
+.choice p{
+    font-size:16px ;
+}
+
+.choice p:first-of-type{
+    padding-right: 23px ;
+}

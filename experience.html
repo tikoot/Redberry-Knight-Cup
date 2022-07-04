@@ -52,30 +52,31 @@
                         <div class="form_wrap">
                             <form action="" id="form_experience">
                                 <div class="select_container">
-                                <select name="knowledge" class="knowledge_select" required>
-                                    <option value="" disabled selected><span class="selected">level of knowledge<span> *</span></span></option>
+                                <select name="knowledge" class="knowledge_select"  aria-labelledby="dropdownMenuButton" required>
+                                <option value="" disabled selected>level of knowledge</option>*
                                     <option value="begginer">Begginer</option>
                                     <option value="intermediate">Intermediate</option>
                                     <option value="professional">Professional</option>  
                                 </select>
-                                <select name="character" id="character_select">
-
+                            
+                                <select name="character" id="character_select" class="character_select">
+                                    <option value="" disabled selected>Choose your character</option>
+                                      
                                 </select>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
                             </div>
                             <div class="radio">
                                 <label for="yes_no_radio">Have you participated in the Redberry Championship? <span>*</span></label>
-                                    <p>
-                                    <input type="radio" name="yes_no" checked>Yes</input>
-                                    </p>
-                                    <p>
-                                    <input type="radio" name="yes_no">No</input>
-                                    </p>
+                                <div class="choice">
+                                        <p>
+                                        <input type="radio" name="yes_no" checked></input>
+                                        Yes
+                                        </p>
+                                        <p>
+                                        <input type="radio" name="yes_no"></input>
+                                        No
+                                        </p>
+                                </div>
+                                    
                             </div>
                             </form>
                         </div>
