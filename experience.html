@@ -27,6 +27,8 @@
                     <p class="header_text">First step is done, continue to finish onboarding</p>
                 </div>
                 <div class="content_container">
+                    <div id="error_box_1"> 
+                        <p><span>!</span>Please, fill out this field</p></div>
                     <div class="form_change">
                         <div class="first">
                             <div class="box  box_exp">
@@ -57,10 +59,11 @@
                                             <p id="selectText">level of knowledge <span>*</span></p>
                                             <img src="../assets/chevron.png" alt="img" id="arrowIcon">
                                         </div>
+                                       
                                         <ul id="list" class="hide">
-                                            <li class="options" data-value="begginer">Begginer</li>
-                                            <li class="options" data-value="intermediate">Intermediate</li>
-                                            <li class="options" data-value="professional">Professional</li>
+                                            <li class="options" data-value="begginer" id="1">Begginer</li>
+                                            <li class="options" data-value="intermediate" id="2">Intermediate</li>
+                                            <li class="options" data-value="professional" id="3">Professional</li>
                                         </ul>
                                     </div>
                                     <div class="selector">
@@ -68,7 +71,7 @@
                                             <p id="selectText_character">Choose your character<span> *</span></p>
                                             <img src="../assets/chevron.png" alt="img" id="arrowIcon_character">
                                         </div>
-                                        <ul id="list_character" class="hide_character">
+                                        <ul id="list_character" class="hide">
 
                                         </ul>
                                     </div>
@@ -77,11 +80,11 @@
                                         <label for="yes_no_radio">Have you participated in the Redberry Championship? <span>*</span></label>
                                         <div class="choice">
                                                 <p>
-                                                <input type="radio" name="yes_no" checked></input>
+                                                <input type="radio" name="yes_no" value="true" checked></input>
                                                 Yes
                                                 </p>
                                                 <p>
-                                                <input type="radio" name="yes_no"></input>
+                                                <input type="radio" name="yes_no" value="false"></input>
                                                 No
                                                 </p>
                                         </div>

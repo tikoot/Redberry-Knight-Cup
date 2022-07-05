@@ -523,13 +523,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 600;
 }
 
-.hide,
-.hide_character{
+.hide{
     visibility: hidden;
 }
 
-.rotate,
-.rotate_character{
+.rotate{
     transform: rotate(180deg);
 }
 
@@ -561,9 +559,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-left: 16px;
 }
 
-.dissapear{
-    opacity: 0;
-}
 
 ul#list_character {
     max-height: 176px;
@@ -572,11 +567,37 @@ ul#list_character {
   }
 
 
-  input[type="radio"]{
-    
-width: 20px;
-height: 20px;
 
+  
+  #error_box_1{
+    width: 350px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position:absolute;
+    display: none;
+  }
 
-background: #0D6EFD;
+  #error_box_1 p{
+     padding: 8px 0 8px 16px;
+  }
+
+  #error_box_1 span{
+    padding: 2px 10px;
+    margin-right: 5px;
+    color: #fffde6;
+    background-color: #f6a631;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .error_box_character {
+    left:450px;
+    top:445px;
+  }
+  
+  .error_box_experience{
+    left:50px;
+    top:445px;
   }
