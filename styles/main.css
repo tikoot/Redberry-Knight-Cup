@@ -244,3 +244,22 @@ body{
 .form_wrap {
     width: 775px;
 }
+
+/* last pgae */
+
+.right_side_success{
+    margin:  auto;
+}
+
+.right_side_success .main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.complete_txt{
+    font-weight: 800;
+    font-size: 36px;
+    color: #000;
+}
