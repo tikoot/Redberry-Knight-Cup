@@ -99,38 +99,3 @@ function changeBox(){
       } 
     }
   }
-
-
-
-//////
-
-const form = document.getElementById('form_experience');
-let err_bx =  document.getElementById('error_box_1');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(checkValidation()){
-        location.href = "last.html";
-    }else{
-       err_bx.style.display= 'block';
-        setTimeout(() => {
-            err_bx.style.display = 'none';
-          }, 1000);
-    }
-});
-
-  function checkVaildation(){
-    let result;
-    if(document.getElementById("selectText").getAttribute('data-value') === null){
-      err_bx.classList.add('error_box_experience');
-      err_bx.classList.remove('error_box_character');
-      result = false;
-    }else if(document.getElementById("selectText_character").getAttribute('data-value') === null){
-        err_bx.classList.add('error_box_character');
-        err_bx.classList.remove('error_box_experience');
-        result = false;
-    }else{
-      result = true;
-    }
-    return result;
-  }
