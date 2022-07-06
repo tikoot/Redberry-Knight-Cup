@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/signup.css">
     <title>Redberry Knight Cup</title>
 </head>
 <body>
@@ -17,10 +18,12 @@
                 </div>
                 <div class="left_side_content">
                     <h1 class="quote">“When you see a good move,</h1>
-                        <h1>look for a better one.”</h1>
+                        <h1> look for a better one.”</h1>
                         <h2>-Emanuel Lasker</h2>
                 </div>
+                <div class="img_container">
               <img src="./assets/unsplash_27LH_0jXKYI.png" alt="chess_photo">
+            </div>
             </div>
             <div class="signup_section">
                 <div class="header">
@@ -48,7 +51,7 @@
                                 <img src="./assets/Vector.png" alt="alert_img">
                                 <h1 id="error"></h1>
                             </div>
-                            <button><img src="assets/Vector (2).png" alt="close_img"></button>
+                            <button><img src="assets/Vector (2).png" alt="close_img" id="close_btn"></button>
                         </div>
                         <p id="description"></p>
                     </div>
@@ -62,7 +65,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                         <div class="input_cont">
-                                            <input type="text" id="name" required>
+                                            <input type="text" id="name" required onfocus="myFunction(this)">
                                             <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                         </div>
 
@@ -75,7 +78,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                         <div class="input_cont">
-                                            <input  type="text" id="email" required>
+                                            <input  type="text" id="email" required onfocus="myFunction(this)">
                                             <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                         </div>
                                         
@@ -87,7 +90,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                         <div class="input_cont">
-                                            <input type="text" id="phone"  required>
+                                            <input type="text" id="phone"  required onfocus="myFunction(this)">
                                             <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                         </div>
                                         
@@ -99,7 +102,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                     <div class="input_cont">
-                                        <input  type="text" onfocus="(this.type='date')" id="date_of_birth" required>
+                                        <input  type="text" onfocus="(this.type='date') , myFunction(this)" id="date_of_birth" required>
                                         <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                     </div>
                                         <div class="placeholder" >

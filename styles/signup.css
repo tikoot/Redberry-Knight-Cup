@@ -1,0 +1,132 @@
+
+.each_input_wrapper{
+    width: 775px;
+    height: 46px;
+    margin-bottom: 40px;
+    position: relative;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.125);
+    border-radius: 4px;
+}
+
+.input_wrap input{
+    font-weight: 400;
+    font-size: 20px;
+    height: 30px;
+    width: 743px; 
+    border: none;
+    outline: none;
+}
+
+.input_wrap {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 14px;
+    color: #212529;;
+}
+
+
+.each_input_wrapper:hover 
+{
+    background-color: #f8f9fa
+}
+
+.each_input_wrapper:hover .input_wrap input 
+{
+    background-color: #f8f9fa
+}
+
+.each_input_wrapper:hover .placeholder 
+{
+    color: #949698;
+}
+
+
+.input_cont{
+   display: flex;
+   align-items: center;
+   position: relative;
+}
+
+.input_cont_img{
+   position: absolute;
+   top:2px;
+   right: 0px;
+   display: none;
+}
+
+.placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    bottom: 0px;
+    color: #212529;;
+    display: none;
+  }
+
+
+.placeholder span {
+    color:  rgba(220, 53, 69, 1);
+}  
+
+.error_color {
+    color: #DC3545;
+}
+
+
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+    padding-right: 600px;
+}
+
+/* Error Box */
+
+.error_box{
+    width: 350px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    position:absolute;
+    left:608px;
+    display: none;
+}
+
+.error_header_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px  12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.error_header{
+    display: flex;
+    align-items:flex-end;
+}
+
+.error_header h1{
+    font-weight: 600;
+    font-size: 14px;
+    color: #DC3545;
+    padding-left: 8px;
+}
+
+.error_header_wrap button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.error_box p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #212529;
+    padding: 12px;
+}

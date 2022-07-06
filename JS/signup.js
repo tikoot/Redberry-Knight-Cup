@@ -13,14 +13,11 @@ form.addEventListener('submit', (e) => {
 });
 
 
-/* input placeholder */
-
-
 displayPlaceholder(username,'name');
 displayPlaceholder(email,'email');
 displayPlaceholder(phone,'phone');
 displayPlaceholder(date,'date_of_birth');
-
+changeBox();
 
 /* UserInput Validation and Errors */
 
@@ -37,22 +34,10 @@ function checkInput(){
 
     let checker;
     let validationArray = [];
-    if(usernameVal.length < 2 || !usernameVal.match(nameReg) ){
-        let text1 = 'Invalid name';
-        let text2 = 'Please enter valid name';
-        showError(username,text1,text2);
-    }else{
-        showSuccess(username);
-        validationArray.push('username');
-    }
 
-    if(!emailVal.match(emailReg) ){
-        let text1 = 'Invalid email';
-        let text2 = 'Please enter valid email';
-        showError(email,text1,text2);
-    }else{
-        showSuccess(email);
-        validationArray.push('username');
+    if(dateVal){
+        showSuccess(date);
+        validationArray.push('date');
     }
 
     if(!phoneVal.match(phoneReg)){
@@ -61,13 +46,28 @@ function checkInput(){
         showError(phone,text1,text2);
     }else{
         showSuccess(phone);
+        validationArray.push('phone');
+    }
+
+    if(!emailVal.match(emailReg) ){
+        let text1 = 'Invalid email';
+        let text2 = 'Please enter valid email';
+        showError(email,text1,text2);
+    }else{
+        showSuccess(email);
+        validationArray.push('email');
+    }
+
+
+    if(usernameVal.length < 2 || !usernameVal.match(nameReg)){
+        let text1 = 'Invalid name';
+        let text2 = 'Please enter valid name';
+        showError(username,text1,text2);
+    }else{
+        showSuccess(username);
         validationArray.push('username');
     }
 
-    if(dateVal){
-        showSuccess(date);
-        validationArray.push('username');
-    }
 
     if(validationArray.length == 4 ){
         checker = true;
@@ -81,7 +81,7 @@ function showError(input,text1,text2){
     const error_header = document.getElementById('error');
     const error_box = document.querySelector('.error_box');
     const error_desc  = document.getElementById('description');
-
+    
     const parent = input.closest('.each_input_wrapper');
    
     error_box.style.display = 'block';
@@ -90,11 +90,20 @@ function showError(input,text1,text2){
     parent.style.background = 'rgba(255, 239, 239, 1)';
     input.style.background = 'rgba(255, 239, 239, 1)';
     input.classList.add('error_color');
+
+
+    let successImg = input.nextElementSibling;
+    successImg.style.display = 'none';
+    closeBtn(error_box,input);
 }
 
 function showSuccess(input){
     let successImg = input.nextElementSibling;
     successImg.style.display = 'block';
+    const parent = input.closest('.each_input_wrapper');
+    parent.style.background = '#fff';
+    input.style.background = '#fff';
+    input.classList.remove('error_color');
 }
 
 
@@ -102,10 +111,9 @@ function displayPlaceholder(input,storage){
     const parent = input.closest('.input_cont');
     const target = parent.nextElementSibling;
 
-
     input.addEventListener("focus", check);
 
-    if(localStorage.getItem(storage) ){
+    if(localStorage.getItem(storage)){
       check(); 
     }else{
         target.style.display = 'block';  
@@ -113,6 +121,7 @@ function displayPlaceholder(input,storage){
 
     function check(){
         target.style.display = 'none'; 
+        parent.style.background = '#e9ecef';
     }
 }
 
@@ -139,7 +148,7 @@ date.addEventListener('keyup' , event => {
 });
 
 
-
+/* change box color */
 function changeBox(){
     let select = document.querySelectorAll("input");
   for (let i = 0; i < select.length; i++) {
@@ -151,4 +160,23 @@ function changeBox(){
     }
   }
 
-changeBox();
+
+
+/* change input color onfocus  */
+function myFunction(input) {
+    input.closest('.each_input_wrapper').style.background = "#e9ecef";
+    input.style.background = "#e9ecef";
+}
+
+/* close errors popup */
+function closeBtn(error_box,input){
+    let closeBtn = document.getElementById('close_btn');
+    closeBtn.addEventListener('click', () => {
+        error_box.style.display = 'none';
+        const parent = input.closest('.each_input_wrapper');
+        parent.style.background = '#fff';
+        input.style.background = '#fff';
+        input.classList.remove('error_color');
+      });
+}
+
