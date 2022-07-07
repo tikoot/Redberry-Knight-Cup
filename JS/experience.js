@@ -88,6 +88,18 @@ function getCharacters(){
       });
  }
 
+
+let radioValue = localStorage.getItem("already_participated");
+if(radioValue == 'true'){ 
+    const yesBtn = document.getElementById('yes');
+    yesBtn.checked = true;
+  }else if(radioValue == 'false'){
+    const noBtn = document.getElementById('no');
+    noBtn.checked = true;
+}
+  
+ 
+
 /* change experience box */
 function changeBox(){
     let select = document.querySelectorAll(".selector");
