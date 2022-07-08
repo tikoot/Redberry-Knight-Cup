@@ -36,25 +36,13 @@
     display: flex;
 }
 
-.radio label{
-    font-family: 'Open Sans';
-    font-weight: 400;
-    font-size: 20px;
-    padding-bottom: 20px;
-}
-
-
 .choice{
     display: flex;
-    align-items: center;
+    align-items:flex-end;
+    padding-top: 20px;
 }
-
-.choice p{
-    font-size:16px ;
-}
-
-.choice p:first-of-type{
-    padding-right: 23px ;
+.radio_wrap:first-child{
+    padding-right: 20px;
 }
 
 /* custom dropdowns */
@@ -156,23 +144,11 @@
     }
  
 
-.radio .choice{
-    padding-top: 22px;
-}
-
-.radio label,
-.radio .choice{
-    padding-left: 16px;
-}
-
-
 ul#list_character {
     max-height: 176px;
     overflow-y: auto;
     overflow-x: hidden;
   }
-
-
 
 /* errors */ 
   #error_box_1{
@@ -211,4 +187,3 @@ ul#list_character {
 
 
  
-
