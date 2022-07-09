@@ -55,7 +55,7 @@
                             <p>This is basic informaton fields</p>
                         </div>
                         <div class="form_wrap">
-                            <form action="" id="form_experience">
+                            <form action="" method="" id="form_experience">
                                 <div class="select_container">
                                     <div class="select_container_cont">
                                     <div class="selector">
@@ -65,8 +65,8 @@
                                         </div>
                                        
                                         <ul id="list" class="hide">
-                                            <li class="options" data-value="begginer" id="1">Begginer</li>
-                                            <li class="options" data-value="intermediate" id="2">Intermediate</li>
+                                            <li class="options" data-value="beginner" id="1">Beginner</li>
+                                            <li class="options" data-value="normal" id="2">Normal</li>
                                             <li class="options" data-value="professional" id="3">Professional</li>
                                         </ul>
                                     </div>
@@ -82,9 +82,9 @@
                                 </div>
                                     <div class="radio" id="radio">
                                         <label for="yes_no_radio">Have you participated in the Redberry Championship? <span>*</span></label>
-                                        <div class="choice">
+                                       <div class="choice">
                                             <div class="radio_wrap  form-check">
-                                                <input type="radio" name="yes_no" value="true" id="yes" class="form-check-input"checked></input>
+                                                <input type="radio" name="yes_no" value="true" id="yes" class="form-check-input" required></input>
                                                 <label for="yes" class="form-check-label">Yes</label>
                                             </div>
                                             <div class="radio_wrap  form-check ">
@@ -92,11 +92,11 @@
                                                 <label for="no" class=" form-check-label">No</label>
                                             </div>
                                         </div>
-                                 </div>   
+                                 </div>  
                             </div>
                             <div class="buttons_wrap">
                                 <a  href='signup.html' class="back_btn">Back</a>
-                                <button type="submit" class="next_btn">Next<img src="assets/Vector (1).png" alt="arrow_img"></button>
+                                <button id="send_data" type="submit"class="next_btn">Next<img src="assets/Vector (1).png" alt="arrow_img"></button>
                             </div>
                         </form>
                         </div>
@@ -107,7 +107,7 @@
                
             </div>
         </main>
-        <script src="JS/experience.js"></script>
-        <script src="JS/send.js"></script>
+        <script src="js/experience.js"></script>
+        
 </body>
 </html>

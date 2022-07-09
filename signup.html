@@ -65,7 +65,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                         <div class="input_cont">
-                                            <input type="text" id="name" required onfocus="myFunction(this)">
+                                            <input type="text" id="name" name="username"required onfocus="myFunction(this)">
                                             <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                         </div>
 
@@ -102,7 +102,7 @@
                                 <div class="each_input_wrapper">
                                     <div class="input_wrap">
                                     <div class="input_cont">
-                                        <input  type="text" onfocus="(this.type='date') , myFunction(this)" id="date_of_birth" required>
+                                        <input  type="date" onfocus="(this.type='date') , myFunction(this)" id="date_of_birth" required>
                                         <img class="input_cont_img" src="assets/Vector (3).png" alt="check_img">
                                     </div>
                                         <div class="placeholder" >
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="buttons_wrap">
                                     <a  href='index.html' class="back_btn">Back</a>
-                                    <button type="submit" class="next_btn">Next<img src="assets/Vector (1).png" alt="arrow_img"></button>
+                                    <a id="sign_btn" class="next_btn" >Next<img src="assets/Vector (1).png" alt="arrow_img"></a>
                                 </div>
                             </form>
                         </div>
@@ -123,6 +123,6 @@
                
             </div>
         </main>
-        <script src="JS/signup.js"></script>
+        <script src="js/signup.js"></script>
 </body>
 </html>

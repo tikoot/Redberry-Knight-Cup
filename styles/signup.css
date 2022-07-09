@@ -76,10 +76,27 @@
     color: #DC3545;
 }
 
-
-
-
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"]::before {
+    content: attr(placeholder);
+    position: absolute;
+    color: #999999;
+  }
+  
+  input[type="date"] {
+    color: #ffffff;
+  }
+  
+  input[type="date"]:focus,
+  input[type="date"]:valid {
+    color: #666666;
+  }
+  
+  input[type="date"]:focus::before,
+  input[type="date"]:valid::before {
+    content: "";
+  }
+  
+  input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     cursor: pointer;
     padding-right: 600px;

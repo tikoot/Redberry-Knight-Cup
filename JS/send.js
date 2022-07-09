@@ -1,53 +1,24 @@
-const form = document.getElementById('form_experience');
-let err_bx =  document.getElementById('error_box_1');
-let next_btn = document.querySelector('.next_btn');
+let username = localStorage.getItem('name');
+let email  = localStorage.getItem('email');
+let phone = localStorage.getItem('phone');
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if(checkValidation()){
-        
-        fetch('https://chess-tournament-api.devtest.ge/api/register', {
-            method: 'POST',
-            body: JSON.stringify({
-                "name": localStorage.getItem('name'),
-                "email": localStorage.getItem('email'),
-                "phone": localStorage.getItem('phone'),
-                "date_of_birth": localStorage.getItem('date_of_birth'),
-                "experience_level": localStorage.getItem('experience_level'),
-                "already_participated": localStorage.getItem('already_participated'),
-                "character_id": localStorage.getItem('character_id')
-            }),
-            headers:{
-                "accept": "application/json" ,
-                "Content-Type": "application/json"
-            }
-        })
+let date = localStorage.getItem('date_of_birth');
+let experience =  localStorage.getItem('experience_level');
+let partipicated = JSON.parse(localStorage.getItem('already_participated'));
+let character = JSON.parse(localStorage.getItem('character_id'));
 
-        
-        localStorage.clear();
-    
-        next_btn.innerHTML = 'Done';
-        location.href = "last.html";
-    }else{
-       err_bx.style.display= 'block';
-        setTimeout(() => {
-            err_bx.style.display = 'none';
-          }, 1000);
-    }
-});
+let xhr = new XMLHttpRequest();
+xhr.open("POST", 'https://chess-tournament-api.devtest.ge/api/register', true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({
+    "name": username,
+    "email": email,
+    "phone": phone,
+    "date_of_birth": date,
+    "experience_level": experience,
+    "already_participated": partipicated,
+    "character_id": character
+})); 
 
-  function checkValidation(){
-    let result;
-    if(document.getElementById("selectText").textContent == 'level of knowledge *'){
-      err_bx.classList.add('error_box_experience');
-      err_bx.classList.remove('error_box_character');
-      result = false;
-    }else if(document.getElementById("selectText_character").textContent == 'Choose your character *'){
-        err_bx.classList.add('error_box_character');
-        err_bx.classList.remove('error_box_experience');
-        result = false;
-    }else{
-        result = true;
-    }
-    return result;
-  }
+
+localStorage.clear();

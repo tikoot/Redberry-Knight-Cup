@@ -3,6 +3,33 @@ getCharacters();
 dropdownExperience();
 getRadioVal();
 
+let err_bx =  document.getElementById('error_box_1');
+let next_btn = document.querySelector('.next_btn');
+
+const form = document.getElementById('form_experience');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  if(localStorage.getItem('experience_level') == null){
+      err_bx.classList.add('error_box_experience');
+      err_bx.classList.remove('error_box_character');
+      err_bx.style.display= 'block';
+      setTimeout(() => {
+          err_bx.style.display = 'none';
+        }, 1000);
+    }else if(localStorage.getItem('character_person') == null){
+      err_bx.classList.remove('error_box_experience');
+      err_bx.classList.add('error_box_character');
+      err_bx.style.display= 'block';
+      setTimeout(() => {
+          err_bx.style.display = 'none';
+        }, 1000);
+    }else{
+      next_btn.innerHTML = 'Done';
+      location.href = "send.html";
+    }
+})
+
 function getCharacters(){
     let api ="https://chess-tournament-api.devtest.ge/api/grandmasters";
     fetch(api, {
@@ -76,8 +103,9 @@ function getCharacters(){
   
   function addLocal(dataAttr,dataAttrTwo,localitem,localitem2){
     if(dataAttr !== null && dataAttrTwo !== null){
+      let data = dataAttrTwo.toLowerCase();
       localStorage.setItem(localitem,dataAttr);
-      localStorage.setItem(localitem2,dataAttrTwo);
+      localStorage.setItem(localitem2,data);
     }
   }
 
@@ -111,3 +139,5 @@ function changeBox(){
       } 
     }
   }
+
+

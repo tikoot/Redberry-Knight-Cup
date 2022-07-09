@@ -5,13 +5,12 @@ const phone = document.getElementById('phone');
 const date = document.getElementById('date_of_birth');
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+let signBtn = document.getElementById('sign_btn');
+signBtn.onclick = function () {
     if(checkInput()){
         location.href = "experience.html";
     } 
-});
-
+} 
 
 displayPlaceholder(username,'name');
 displayPlaceholder(email,'email');
@@ -130,8 +129,7 @@ function displayPlaceholder(input,storage){
 email.value = localStorage.getItem('email');
 username.value = localStorage.getItem('name');
 phone.value = localStorage.getItem('phone');
-date.value = localStorage.getItem('date_of_birth');
-
+date.value =  localStorage.getItem('date_of_birth');
 
 
 username.addEventListener('keyup' , event => {
@@ -143,10 +141,9 @@ email.addEventListener('keyup' , event => {
 phone.addEventListener('keyup' , event => {
     localStorage.setItem('phone',event.target.value);
 });
-date.addEventListener('keyup' , event => {
+date.addEventListener('change' , event => {
     localStorage.setItem('date_of_birth',event.target.value);
 });
-
 
 /* change box color */
 function changeBox(){
