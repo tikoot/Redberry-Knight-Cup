@@ -4,13 +4,13 @@ const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 const date = document.getElementById('date_of_birth');
 
-
-let signBtn = document.getElementById('sign_btn');
-signBtn.onclick = function () {
+form.addEventListener('submit',(e) => {
+    e.preventDefault();
     if(checkInput()){
         location.href = "experience.html";
     } 
-} 
+});
+
 
 displayPlaceholder(username,'name');
 displayPlaceholder(email,'email');
