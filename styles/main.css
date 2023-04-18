@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x:hidden;
 }
 
 body{
@@ -113,7 +113,7 @@ body{
 .left_side_content{
     position: absolute;
     z-index: 1;
-    left: 132px;
+    left: 70px;
     top: 350px;
     text-transform: uppercase;
     font-style: italic;
@@ -161,16 +161,91 @@ body{
 .content_container{
     padding-top: 60px;
     padding-left: 48px;
+    padding-right: 48px;
     position: relative;
 }
 
 
+.form_change{
+    display: none;
+}
+
+
+
+.title_wrap h1{
+    font-weight: 600;
+    font-size: 32px;
+    color:#000;
+}
+
+.title_wrap p{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #95939A;
+    padding-top: 3px;
+}
+
+.form_change .line{
+    position: absolute;
+    top:20px;
+    left:100px;
+    padding: 0 4px;
+}
+
+.form_wrap form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 93px;
+}
+
+
+
+/* last pgae */
+
+.right_side_success{
+    margin:  auto;
+}
+
+.right_side_success .main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.complete_txt{
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+    color: #000;
+}
+
+@media only screen and (min-width: 1427px) {
+ .content_container{
+    padding-right: 0;
+}
+
 .form_change {
     width: 366px;
+} 
+
+}
+
+
+
+@media only screen and (min-width: 675px) {
+*{
+    overflow: hidden;
+}
+
+.form_change {
+    display: block;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 366px;
 } 
 
 .form_change .first,
@@ -213,53 +288,5 @@ body{
 .form_container{
     margin-top:112px;
 }
-
-.title_wrap h1{
-    font-weight: 600;
-    font-size: 32px;
-    color:#000;
 }
 
-.title_wrap p{
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #95939A;
-    padding-top: 3px;
-}
-
-.form_change .line{
-    position: absolute;
-    top:20px;
-    left:100px;
-    padding: 0 4px;
-}
-
-.form_wrap form{
-    display: flex;
-    flex-direction: column;
-    padding-top: 93px;
-}
-
-.form_wrap {
-    width: 775px;
-}
-
-/* last pgae */
-
-.right_side_success{
-    margin:  auto;
-}
-
-.right_side_success .main_content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.complete_txt{
-    font-weight: 800;
-    font-size: 36px;
-    color: #000;
-}

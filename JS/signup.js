@@ -50,7 +50,7 @@ function checkInput(){
 
     if(!emailVal.match(emailReg) ){
         let text1 = 'Invalid email';
-        let text2 = 'Please enter valid email';
+        let text2 = 'Please enter valid email in Redberry format (@redberry.ge)';
         showError(email,text1,text2);
     }else{
         showSuccess(email);

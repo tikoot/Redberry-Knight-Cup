@@ -1,6 +1,5 @@
-
 .left_side{
-    position: relative;
+    display: none;
 }
 
 .header{
@@ -19,22 +18,42 @@
 .main_content{
     position: absolute;
     top: 265px;
-    left: 85px;
+    left: 45px;
 }
 
-
 .title{
-    font-weight: 800;
-    font-size: 80px;
     text-transform:uppercase;
     color: #fff;
 }
 
 .title span{
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
     color: rgba(33, 37, 41, 1);
     vertical-align: middle;
 }
 
+@media only screen and (min-width: 1427px) {
+    .left_side{
+    position: relative;
+    display: block;
+}
+}
+
+
+@media only screen and (min-width: 675px) {
+.title{
+    font-weight: 800;
+    font-size: 80px;
+
+}
+
+.title span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.main_content{
+    left: 85px;
+}
+}
 
