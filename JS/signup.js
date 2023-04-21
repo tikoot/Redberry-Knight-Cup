@@ -35,7 +35,6 @@ function checkInput(){
     let validationArray = [];
 
     if(dateVal){
-        //showSuccess(date);
         validationArray.push('date');
     }
 
@@ -44,7 +43,6 @@ function checkInput(){
         let text2 = 'Please enter valid phone number (only 9 digits)';
         showError(phone,text1,text2);
     }else{
-        //showSuccess(phone);
         validationArray.push('phone');
     }
 
@@ -53,7 +51,6 @@ function checkInput(){
         let text2 = 'Please enter valid email in Redberry format (@redberry.ge)';
         showError(email,text1,text2);
     }else{
-        //showSuccess(email);
         validationArray.push('email');
     }
 
@@ -63,7 +60,6 @@ function checkInput(){
         let text2 = 'Please enter valid name';
         showError(username,text1,text2);
     }else{
-        //showSuccess(username);
         validationArray.push('username');
     }
 
@@ -96,14 +92,6 @@ function showError(input,text1,text2){
     closeBtn(error_box,input);
 }
 
-// function showSuccess(input){
-//     let successImg = input.nextElementSibling;
-//     successImg.style.display = 'block';
-//     const parent = input.closest('.each_input_wrapper');
-//     parent.style.background = '#fff';
-//     input.style.background = '#fff';
-//     input.classList.remove('error_color');
-// }
 
 
 function displayPlaceholder(input,storage){
@@ -120,7 +108,6 @@ function displayPlaceholder(input,storage){
 
     function check(){
         target.style.display = 'none'; 
-        //parent.style.background = '#e9ecef';
     }
 }
 
