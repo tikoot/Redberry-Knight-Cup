@@ -14,7 +14,7 @@
     font-weight: 400;
     font-size: 20px;
     height: 30px;
-    width: 90%; 
+    width: 100%; 
     border: none;
     outline: none;
 }
@@ -50,12 +50,12 @@
    position: relative;
 }
 
-.input_cont_img{
+/* .input_cont_img{
    position: absolute;
    top:2px;
    right: 0px;
    display: none;
-}
+} */
 
 .placeholder {
     font-weight: 400;
